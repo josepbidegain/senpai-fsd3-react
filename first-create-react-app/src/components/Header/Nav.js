@@ -21,7 +21,7 @@ function Nav(props) {
                 props.logueado == true ?
                     <NavItem id="segundoItem" name={`Bienvenido ${props.username}` } color="back" />
                 :
-                    <NavItem className="segundItem" name='Inicio' finalizado={props.finalizado} color="red" />                                    
+                    <NavItem className="segundItem" name='Login' finalizado={props.finalizado} color="red" />                                    
             }
             
         </ul>
