@@ -1,4 +1,3 @@
-import React from 'react'
 import './Lista.css'
 
 function Lista(props) {

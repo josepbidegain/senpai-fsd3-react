@@ -1,11 +1,11 @@
 export const Noticias = (props) => {
     return (
         <>
-            <h1>Lista de tarea 2s</h1>
+            <h1>Lista de Noticias</h1>
             <ul>
-                <li>Tarea4</li>
-                <li>Tarea5</li>
-                <li>Tarea6</li>
+                <li>Noticia1</li>
+                <li>Noticia2</li>
+                <li>Noticia3</li>
             </ul>
         </>
     )
