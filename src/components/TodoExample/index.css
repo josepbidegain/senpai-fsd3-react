@@ -1,0 +1,13 @@
+
+.TodoExampleContainer {
+    margin:50px;
+    padding:50px;
+    background:white;
+    color:black
+}
+.todo {
+  cursor: pointer;
+}
+.strike {
+  text-decoration: line-through;
+}
