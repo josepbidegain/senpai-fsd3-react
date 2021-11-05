@@ -48,13 +48,19 @@ function Profile({data}) {
         <h1>Amazing scientists</h1>
         
             <h2>Personas renderizado con iteracion map</h2>
-            {profiles.map((item) => <Profile data={item}></Profile>)}
+            {
+                profiles.map((item) => <Profile data={item}></Profile>)
+            }
             
             <br/>
             
             {/* renderizando array creado desde iteracion con for */}
             <h2>Personas renderizado con iteracion for</h2>
-            {personasDesdeFor}
+            {
+                personasDesdeFor.length ?
+                    personasDesdeFor
+                    : <h3>No hay personas </h3>
+            }
 
             <br/>
             <h2>Mayores de edad (aplicamos filter)</h2>

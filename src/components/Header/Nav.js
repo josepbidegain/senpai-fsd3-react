@@ -13,13 +13,16 @@ function NavItem() {
 
 function Nav(props) {
 
+    const handleClick = () => {
+        console.log('hizo click')
+    }
 
     return (
     <>
         <ul className="navbar">
             {
                 props.logueado == true ?
-                    <NavItem id="segundoItem" name={`Bienvenido ${props.username}` } color="back" />
+                    <NavItem hizoClick={handleClick} name={`Bienvenido ${props.username}`} id="segundoItem" color="back" />
                 :
                     <NavItem className="segundItem" name='Login' finalizado={props.finalizado} color="red" />                                    
             }

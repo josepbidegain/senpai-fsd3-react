@@ -1,7 +1,11 @@
 import React from 'react';
 import ToDo from './ToDo';
 
-const ToDoList = ({toDoList, handleToggle, handleFilter}) => {
+const ToDoList = (props) => {
+    //const {toDoList, handleToggle, handleFilter} = props
+    const toDoList = props.toDoList
+    const handleToggle = props.handleToggle
+    const handleFilter = props.handleFilter
     return (
         <div>
             {toDoList.map(todo => {

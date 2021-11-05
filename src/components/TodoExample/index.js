@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.css'
 //mock data
 import data from "./data.json";
@@ -31,6 +31,7 @@ function ToDoExample() {
     setToDoList(copy);
   }
 
+  
   return (
     <div className="TodoExampleContainer">
       <Header />
