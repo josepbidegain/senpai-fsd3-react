@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+
 /*
 export default class NavItem extends React.Component {
     constructor(props) {
@@ -38,19 +39,27 @@ export default class NavItem extends React.Component {
 
 export default function NavItem(props) {
         /*
-            const leido = useState(false)
-            const leidoValue = leido[0]
-            const setLeidoValue = leido[1]
+            const respuesta = useState(false)
+            const leidoValor = respuesta[0]
+            const setLeidoValor = respuesta[1]
         */
+    
     const [leido,setLeido] = useState(false)
-    const [colorDeFondo,setColorDeFondo] = useState('')
-
+    
     return <li 
-            style={{background:colorDeFondo,  textDecoration: leido ==true ? 'line-through' : 'none'}}
+            style={{textDecoration: leido ==true ? 'line-through' : 'none'}}
             onClick={()=>{
                 setLeido(!leido)
-                setColorDeFondo('green')
-            }}>{props.name}</li>
+            }}>
+                {
+                props.name
+                }
+                <br/>
+                {
+
+                    leido ? 'esta en true ': 'esta en false' 
+                }
+            </li>
 }
 
 export const OtroComponente = () => <h2>Otro Componente</h2>
