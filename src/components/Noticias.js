@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 
 export const noticias = [
     {id:1, titulo:'Hoy es martes', contenido:'Contenido de Noticia Hoy es martes'},
@@ -8,9 +8,9 @@ export const noticias = [
 
 const Noticias = (props) => {
     
-    const listadoNoticias = noticias.map((noticia)=>{
-        const ruta = '/noticias/' + noticia.id
-        return <li><Link to={ruta}>{noticia.titulo}</Link></li>
+    const listadoNoticias = noticias.map((item)=>{
+        const ruta = '/noticias/' + item.id
+        return <li><Link to={ruta}>{item.titulo}</Link></li>
     })
 
     return (
@@ -19,6 +19,7 @@ const Noticias = (props) => {
             <ul>
                 {listadoNoticias}
             </ul>
+            <Outlet />
         </>
     )
 }

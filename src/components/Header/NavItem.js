@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 
 /*
@@ -37,15 +37,17 @@ export default class NavItem extends React.Component {
     }
 }*/
 
+
 export default function NavItem(props) {
-        /*
-            const respuesta = useState(false)
-            const leidoValor = respuesta[0]
-            const setLeidoValor = respuesta[1]
-        */
-    
     const [leido,setLeido] = useState(false)
     
+    useEffect(()=>{
+        console.log('NavItem useEffect')
+        return () => {
+            console.log("se ejecuta cuando se desmonta el componente NavItem");
+          };
+    })
+
     return <li 
             style={{textDecoration: leido ==true ? 'line-through' : 'none'}}
             onClick={()=>{
