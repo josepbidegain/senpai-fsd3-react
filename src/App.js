@@ -9,7 +9,9 @@ import NotFound from './components/NotFound'
 import Noticias from './components/Noticias'
 import Noticia from './components/Noticia'
 import Timer from './components/Timer'
+import ListaUsuarios from './components/ListaUsuarios'
 
+/*
 class Example extends Component {
   constructor(props) {
     super(props);
@@ -47,7 +49,7 @@ class Example extends Component {
     );
   }
 }
-
+*/
 function App() {
   const [users, setUsers] = useState([])
   const [logueado, setLogueado] = useState(false)
@@ -80,25 +82,23 @@ function App() {
         <li>
           <Link to="/noticias">Noticias</Link>
         </li>
+        <li>
+          <Link to="/usuarios">Usuarios</Link>
+        </li>
       </ul>
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/nosotros" element={<Nosotros />} />
-       
+        <Route path="/usuarios" element={<ListaUsuarios users={users} />} />
         <Route path="/noticias" element={<Noticias />} >
           <Route path=":id" element={<Noticia />} />
         </Route>
+
         <Route path='*' element={<NotFound />} />
       </Routes>
 
-      {
-        users.map(function(usuario) {
-          return usuario.name 
-        })
-      }
-      
-    </div>
+      </div>
   );
 }
 

@@ -10,7 +10,7 @@ const Noticias = (props) => {
     
     const listadoNoticias = noticias.map((item)=>{
         const ruta = '/noticias/' + item.id
-        return <li><Link to={ruta}>{item.titulo}</Link></li>
+        return <li key={item.id}><Link to={ruta}>{item.titulo}</Link></li>
     })
 
     return (
