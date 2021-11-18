@@ -10,9 +10,11 @@ import Noticias from './components/Noticias'
 import Noticia from './components/Noticia'
 import Timer from './components/Timer'
 import ListaUsuarios from './components/ListaUsuarios'
+import Mensajes from './components/Mensajes'
+
 
 /*
-class Example extends Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -85,11 +87,15 @@ function App() {
         <li>
           <Link to="/usuarios">Usuarios</Link>
         </li>
+        <li>
+          <Link to="/mensajes">Mensajes</Link>
+        </li>
       </ul>
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/mensajes" element={<Mensajes />} />
         <Route path="/usuarios" element={<ListaUsuarios users={users} />} />
         <Route path="/noticias" element={<Noticias />} >
           <Route path=":id" element={<Noticia />} />
@@ -100,6 +106,9 @@ function App() {
 
       </div>
   );
+  
+
 }
+
 
 export default App;
